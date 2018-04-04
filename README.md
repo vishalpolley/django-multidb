@@ -1,11 +1,25 @@
 # Django Multiple Database Connectivity
 Configuring Multiple Databases in Django.
 
+## Setting Up the Project
+* Firstly clone/download the repo [here](https://github.com/vishalpolley/django-multidb/archive/master.zip)
+```
+git clone https://github.com/vishalpolley/django-multidb.git
+```
+* Navigate inside the multidb folder
+```
+cd multidb/
+```
+* Install all the dependencies required for the project
+```
+pip install -r requirements.txt
+```
+
 ## Database Setup
 The project Postgresql and MySQL as backend databases.
 
 ### Postgresql Database Setup
-The data of the fisrt app is being saved in the postgresql database. The default database is 'form', which can be easily changed through the `settings.py` file.
+The data of the fisrt app is being saved in the postgresql database. The default database is `form`, which can be easily changed through the `settings.py` file.
 
 #### Configuring Postgres Installation
 * After installing postgresql database, open psql by running the following commands
@@ -66,24 +80,10 @@ CREATE DATABASE form;
     },
 ```
 
-## Setting Up the Project
-* Firstly clone/download the repo [here](https://github.com/vishalpolley/django-multidb/archive/master.zip)
-```
-git clone https://github.com/vishalpolley/django-multidb.git
-```
-* Navigate inside the multidb folder
-```
-cd multidb/
-```
-* Install all the dependencies required for the project
-```
-pip install -r requirements.txt
-```
-* The default credentials for super user are 
-```
-username: user
-password: qwerty123
-```
+## Run the Project
+
+After setting up both the databases run the migrations
+
 * Run the migrations for the postgresql database for app1
 ```
 python manage.py migrate --database=form1_db
@@ -108,7 +108,11 @@ http://127.0.0.1:8000/app2/
 ```
 http://127.0.0.1:8000/admin/
 ```
-enter the default credentials to login to the Django admin
+Enter the default credentials to login to the Django admin
+```
+username: user
+password: qwerty123
+```
 
 ### Checking the entries over individual databases
 
