@@ -1,11 +1,10 @@
 # Django Multiple Database Connectivity
 Configuring Multiple Databases in Django.
 
-**Databases**
-
+## Database Setup
 The project Postgresql and MySQL as backend databases.
 
-### Postgresql database setup
+### Postgresql Database Setup
 The data of the fisrt app is being saved in the postgresql database. The default database is 'form', which can be easily changed through the `settings.py` file.
 
 #### Configuring Postgres Installation
@@ -22,7 +21,7 @@ sudo -u postgres psql postgres
 ```
 \q
 ```
-#### Creation of databases in Postgresql
+#### Creation of Databases in Postgresql
 * For creating the database, open psql by executing the following commands
 ```
 sudo -u postgres psql
@@ -43,7 +42,7 @@ postgres=# createdb form;
     },
 ```
 
-### MySQL database setup
+### MySQL Database Setup
 The data of the second app is being saved in the MySQL database. The default database is 'form', which can be easily changed through the settings.py file.
 * After installing MySQL, open it by running the command
 ```
@@ -111,7 +110,7 @@ http://127.0.0.1:8000/admin/
 ```
 enter the default credentials to login to the Django admin
 
-#### Checking the entries over individual databases
+### Checking the entries over individual databases
 
 **Postgresql**
 
